@@ -861,9 +861,10 @@ section>h2 {
     font-weight: 400;
     margin-bottom: 75px;
     text-align: center;
+}
+#services h2{
     padding: 0 20px;
 }
-
 #services>ul {
     width: 100%;
 }
@@ -1646,8 +1647,17 @@ section>h2 {
     #dark-mode {
         margin-left: 10px;
     }
-
-
+    .hero__left span,
+    .hero__right h2{
+        font-size: calc(50px + 3vw);
+    }
+    .hero__left p{
+        max-width: calc(200px + 22vw);
+        font-size: calc(10px + 1vw);
+    }
+    .hero__right p{
+        font-size: calc(12px + 1vw);
+    }
     .header-nav ul {
         gap: 25px;
     }
@@ -1673,56 +1683,6 @@ section>h2 {
 }
 
 @media (max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        margin: 50px auto 100px;
-        align-items: center;
-        text-align: center;
-        gap: 50px;
-    }
-
-    .hero__left {
-        width: 100%;
-    }
-
-    .hero__left span {
-        font-size: calc(66px + 6vw);
-    }
-
-    .hero__left p {
-        font-size: calc(16px + 1.5vw);
-        max-width: 100%;
-    }
-
-    .hero__left button {
-        font-size: calc(18px + 1.5vw);
-        width: 100%;
-        max-width: 320px;
-        padding: 18px 30px;
-    }
-
-    .hero__center {
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-        transform: none;
-        bottom: initial;
-        left: initial;
-
-    }
-
-    .hero__center>div .icon {
-        width: 45px;
-        height: 45px;
-        background-size: calc(var(--iconsWidth) * 1.5) calc(var(--iconsHeight) * 1.5);
-        background-position: 0 -180px;
-    }
-
-    .hero__right {
-        padding-top: 50px;
-        align-items: center;
-    }
-
     .technologies-carousel {
         margin-bottom: 100px;
     }
@@ -1869,7 +1829,9 @@ section>h2 {
     .contact-form {
         padding-top: 0;
     }
-
+    .contact-form-wrapper{
+        padding-top: 0;
+    }
     .form-group {
         gap: 25px;
         margin-bottom: 25px;
@@ -2054,6 +2016,59 @@ section>h2 {
     .header-nav .logo svg {
         width: auto;
         height: 40px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        margin: 50px auto 100px;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero__left {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .hero__left span {
+        font-size: calc(66px + 6vw);
+    }
+
+    .hero__left p {
+        font-size: calc(16px + 1.5vw);
+        max-width: 100%;
+    }
+
+    .hero__left button {
+        font-size: calc(18px + 1.5vw);
+        width: 100%;
+        max-width: 320px;
+        padding: 18px 30px;
+    }
+    .hero__center {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        transform: none;
+        bottom: initial;
+        left: initial;
+
+    }
+
+    .hero__center>div .icon {
+        width: 45px;
+        height: 45px;
+        background-size: calc(var(--iconsWidth) * 1.5) calc(var(--iconsHeight) * 1.5);
+        background-position: 0 -180px;
+    }
+
+    .hero__right {
+        padding-top: 0;
+        align-items: center;
+    }
+    .hero__right p{
+        font-size: calc(20px + 2vw);
     }
 
     .footer__bottom {
