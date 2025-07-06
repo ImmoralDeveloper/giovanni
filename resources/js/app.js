@@ -73,8 +73,15 @@ scrollBtns.forEach(btn => {
     btn.addEventListener('click', e => {
         if (e.target.dataset.scroll) {
             const section = document.getElementById(e.target.dataset.scroll);
-            section.scrollIntoView({ behavior: 'smooth' });
+            const headerOffset = 65;
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
             document.querySelector('.header-nav').classList.remove('active-menu');
+
         }
     });
 });
